@@ -1,0 +1,6 @@
+{
+    "require": {
+        "symfony/http-foundation": "^3.0",
+        "lovelock/yaf-twig-adapter": "~v1.2"
+    }
+}
