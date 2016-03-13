@@ -11,10 +11,12 @@ class IndexController extends Controller_Abstract
 {
     public function indexAction()
     {
-        $result = Redis::set('ggggg', 'ttttt');
-        var_dump($result);
-        $int = Redis::get('ggggg');
-        var_dump($int);
+        echo "ffff";
         exit;
+    }
+
+    public function fooAction()
+    {
+        echo __METHOD__;exit;
     }
 }

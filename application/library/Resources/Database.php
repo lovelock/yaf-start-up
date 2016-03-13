@@ -22,7 +22,7 @@ class Database extends Common
 
             try {
                 static::$_instance = new PDO(
-                    $dns = static::$_type.':host='.$database_config['host'].':'.$database_config['port'].';dbname='.$database_config['dbname'],
+                    static::$_type.':host='.$database_config['host'].':'.$database_config['port'].';dbname='.$database_config['dbname'],
                     $database_config['username'],
                     $database_config['password'],
                     [

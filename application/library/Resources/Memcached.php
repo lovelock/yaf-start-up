@@ -41,4 +41,17 @@ class Memcached extends Common
     {
         return static::getInstance()->getServerList();
     }
+
+    private function __construct()
+    {
+    }
+
+    private function __wakeup()
+    {
+    }
+
+    private function __clone()
+    {
+    }
+
 }

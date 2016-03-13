@@ -22,6 +22,7 @@ Action	Yaf.namespace.php	/^    class Action extends LoadFailed{}$/;"	c
 Action_Abstract	Yaf.namespace.php	/^    abstract class Action_Abstract$/;"	c
 ApacheRequest	vendor/symfony/http-foundation/ApacheRequest.php	/^class ApacheRequest extends Request$/;"	c
 ApacheRequestTest	vendor/symfony/http-foundation/Tests/ApacheRequestTest.php	/^class ApacheRequestTest extends \\PHPUnit_Framework_TestCase$/;"	c
+AppLog	/var/www/yaf.ubuntu.com/application/library/Log/AppLog.php	/^class AppLog$/;"	c	language:PHP
 Application	Yaf.namespace.php	/^    final class Application$/;"	c
 AttributeBag	vendor/symfony/http-foundation/Session/Attribute/AttributeBag.php	/^class AttributeBag implements AttributeBagInterface, \\IteratorAggregate, \\Countable$/;"	c
 AttributeBagInterface	vendor/symfony/http-foundation/Session/Attribute/AttributeBagInterface.php	/^interface AttributeBagInterface extends SessionBagInterface$/;"	i
@@ -516,10 +517,14 @@ __TwigTemplate_2421462d58c77ffe22361700844c43a8c6985301a78461a99e4efba1897ad5fb	
 __call	vendor/twig/twig/lib/Twig/Error.php	/^    public function __call($method, $arguments)$/;"	f
 __call	vendor/twig/twig/test/Twig/Tests/TemplateTest.php	/^    public function __call($method, $arguments)$/;"	f
 __clone	/var/www/yaf.ubuntu.com/application/library/Resources/Database.php	/^    private function __clone()$/;"	f	language:PHP
+__clone	/var/www/yaf.ubuntu.com/application/library/Resources/Memcached.php	/^    private function __clone()$/;"	f	language:PHP
+__clone	/var/www/yaf.ubuntu.com/application/library/Resources/Redis.php	/^    private function __clone()$/;"	f	language:PHP
 __clone	Yaf.namespace.php	/^        private function __clone(){}$/;"	f
 __clone	vendor/symfony/http-foundation/Request.php	/^    public function __clone()$/;"	f
 __clone	vendor/symfony/http-foundation/Response.php	/^    public function __clone()$/;"	f
 __construct	/var/www/yaf.ubuntu.com/application/library/Resources/Database.php	/^    private function __construct()$/;"	f	language:PHP
+__construct	/var/www/yaf.ubuntu.com/application/library/Resources/Memcached.php	/^    private function __construct()$/;"	f	language:PHP
+__construct	/var/www/yaf.ubuntu.com/application/library/Resources/Redis.php	/^    private function __construct()$/;"	f	language:PHP
 __construct	Yaf.namespace.php	/^        private function __construct(){}$/;"	f
 __construct	Yaf.namespace.php	/^        public function __construct($config, $readonly = null){}$/;"	f
 __construct	Yaf.namespace.php	/^        public function __construct($config, $section = 'product'){}$/;"	f
@@ -697,6 +702,8 @@ __toString	vendor/twig/twig/test/Twig/Tests/Extension/SandboxTest.php	/^    publ
 __toString	vendor/twig/twig/test/Twig/Tests/Loader/ArrayTest.php	/^    public function __toString()$/;"	f
 __unset	vendor/lovelock/yaf-twig-adapter/Twig.php	/^	public function __unset($name)$/;"	f
 __wakeup	/var/www/yaf.ubuntu.com/application/library/Resources/Database.php	/^    private function __wakeup()$/;"	f	language:PHP
+__wakeup	/var/www/yaf.ubuntu.com/application/library/Resources/Memcached.php	/^    private function __wakeup()$/;"	f	language:PHP
+__wakeup	/var/www/yaf.ubuntu.com/application/library/Resources/Redis.php	/^    private function __wakeup()$/;"	f	language:PHP
 __wakeup	Yaf.namespace.php	/^        private function __wakeup(){}$/;"	f
 _app	Yaf.namespace.php	/^        static protected $_app;$/;"	v
 _auto_render	Yaf.namespace.php	/^        protected $_auto_render;$/;"	v
@@ -1640,7 +1647,6 @@ displayBlock	vendor/twig/twig/lib/Twig/Template.php	/^    public function displa
 displayParentBlock	vendor/twig/twig/lib/Twig/Template.php	/^    public function displayParentBlock($name, array $context, array $blocks = array())$/;"	f
 displayWithErrorHandling	vendor/twig/twig/lib/Twig/Template.php	/^    protected function displayWithErrorHandling(array $context, array $blocks = array())$/;"	f
 dispositionHeader	vendor/symfony/http-foundation/BinaryFileResponse.php	/^        $dispositionHeader = $this->headers->makeDisposition($disposition, $filename, $filenameFallback);$/;"	v
-dns	/var/www/yaf.ubuntu.com/application/library/Resources/Database.php	/^                    $dns = static::$_type.':host='.$database_config['host'].':'.$database_config['port'].';dbname='.$database_config['dbname'],$/;"	v	language:PHP
 doAdvisoryLock	vendor/symfony/http-foundation/Session/Storage/Handler/PdoSessionHandler.php	/^    private function doAdvisoryLock($sessionId)$/;"	f
 doDisplay	application/cache/37/37e92c5b0fe5988569cd9671295ced9bae0967c88a5de3324085bcee09f238ad.php	/^    protected function doDisplay(array $context, array $blocks = array())$/;"	f
 doDisplay	vendor/twig/twig/test/Twig/Tests/Node/ModuleTest.php	/^    protected function doDisplay(array \\$context, array \\$blocks = array())$/;"	f
@@ -1999,6 +2005,7 @@ flushInstantly	Yaf.namespace.php	/^        public function flushInstantly($flag)
 foo	vendor/twig/twig/test/Twig/Tests/Extension/SandboxTest.php	/^    public function foo()$/;"	f
 foo	vendor/twig/twig/test/Twig/Tests/TemplateTest.php	/^        $this->foo = @$notExist;$/;"	v
 foo	vendor/twig/twig/test/Twig/Tests/TemplateTest.php	/^    public $foo;$/;"	v
+fooAction	/var/www/yaf.ubuntu.com/application/controllers/Index.php	/^    public function fooAction()$/;"	f	language:PHP
 foo_escaper_for_test	vendor/twig/twig/test/Twig/Tests/Extension/CoreTest.php	/^function foo_escaper_for_test(Twig_Environment $env, $string, $charset)$/;"	f
 format	vendor/symfony/http-foundation/Request.php	/^            $this->format = $this->attributes->get('_format', $default);$/;"	v
 format	vendor/symfony/http-foundation/Request.php	/^        $this->format = $format;$/;"	v
@@ -2648,6 +2655,7 @@ getVarName	vendor/twig/twig/lib/Twig/Parser.php	/^    public function getVarName
 getVarName	vendor/twig/twig/lib/Twig/Profiler/NodeVisitor/Profiler.php	/^    private function getVarName()$/;"	f
 getVariableGetter	vendor/twig/twig/lib/Twig/Test/NodeTestCase.php	/^    protected function getVariableGetter($name, $line = false)$/;"	f
 getVary	vendor/symfony/http-foundation/Response.php	/^    public function getVary()$/;"	f
+getVersion	/var/www/yaf.ubuntu.com/application/library/Resources/Redis.php	/^    public static function getVersion()$/;"	f	language:PHP
 getView	Yaf.namespace.php	/^        public function getView(){}$/;"	f
 getViewPath	Yaf.namespace.php	/^        public function getViewPath(){}$/;"	f
 getZero	vendor/twig/twig/test/Twig/Tests/TemplateTest.php	/^    public function getZero()$/;"	f
@@ -2846,7 +2854,6 @@ insertStmt	vendor/symfony/http-foundation/Tests/Session/Storage/Handler/PdoSessi
 instance	vendor/symfony/http-foundation/File/MimeType/ExtensionGuesser.php	/^    private static $instance = null;$/;"	v
 instance	vendor/symfony/http-foundation/File/MimeType/MimeTypeGuesser.php	/^    private static $instance = null;$/;"	v
 instance	vendor/twig/twig/test/Twig/Tests/Extension/CoreTest.php	/^        $instance = new stdClass();$/;"	v
-int	/var/www/yaf.ubuntu.com/application/controllers/Index.php	/^        $int = Redis::get('ggggg');$/;"	v	language:PHP
 int	vendor/twig/twig/lib/Twig/Extension/Core.php	/^    $int = hexdec($hex);$/;"	v
 intersectSafe	vendor/twig/twig/lib/Twig/NodeVisitor/SafeAnalysis.php	/^    protected function intersectSafe(array $a = null, array $b = null)$/;"	f
 invalidContentProvider	vendor/symfony/http-foundation/Tests/ResponseTest.php	/^    public function invalidContentProvider()$/;"	f
@@ -4210,7 +4217,6 @@ response	vendor/symfony/http-foundation/Tests/StreamedResponseTest.php	/^       
 response	vendor/symfony/http-foundation/Tests/StreamedResponseTest.php	/^        $response = new StreamedResponse(null);$/;"	v
 responseClone	vendor/symfony/http-foundation/Tests/ResponseTest.php	/^        $responseClone = clone $response;$/;"	v
 responseSend	vendor/symfony/http-foundation/Tests/ResponseTest.php	/^        $responseSend = $response->send();$/;"	v
-result	/var/www/yaf.ubuntu.com/application/controllers/Index.php	/^        $result = Redis::set('ggggg', 'ttttt');$/;"	v	language:PHP
 result	/var/www/yaf.ubuntu.com/application/library/Resources/Database.php	/^            $result = $stmt->fetch();$/;"	v	language:PHP
 result	/var/www/yaf.ubuntu.com/application/library/Resources/Database.php	/^            $result = $stmt->fetchAll();$/;"	v	language:PHP
 result	vendor/symfony/http-foundation/Tests/Session/Storage/Handler/PdoSessionHandlerTest.php	/^        $result = $storage->read('foo');$/;"	v
@@ -4358,7 +4364,7 @@ sessionMetadata	vendor/symfony/http-foundation/Tests/Session/Storage/MetadataBag
 sessionRows	vendor/symfony/http-foundation/Session/Storage/Handler/PdoSessionHandler.php	/^                    $sessionRows = $selectStmt->fetchAll(\\PDO::FETCH_NUM);$/;"	v
 sessionRows	vendor/symfony/http-foundation/Session/Storage/Handler/PdoSessionHandler.php	/^        $sessionRows = $selectStmt->fetchAll(\\PDO::FETCH_NUM);$/;"	v
 set	/var/www/yaf.ubuntu.com/application/library/Resources/Memcached.php	/^    public static function set($key, $value)$/;"	f	language:PHP
-set	/var/www/yaf.ubuntu.com/application/library/Resources/Redis.php	/^    public static function set($key, $value)$/;"	f	language:PHP
+set	/var/www/yaf.ubuntu.com/application/library/Resources/Redis.php	/^    public static function set($key, $value, $expires = 0)$/;"	f	language:PHP
 set	/var/www/yaf.ubuntu.com/application/library/Resources/Reids.php	/^    public static function set($key, $value)$/;"	f	language:PHP
 set	Yaf.namespace.php	/^        public function set($name, $value){}$/;"	f
 set	Yaf.namespace.php	/^        static public function set($name, $value){}$/;"	f
