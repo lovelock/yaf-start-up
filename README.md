@@ -26,3 +26,8 @@ An out-of-box Yaf Framework with basic libraries.
 6. Redis pool support.
 
     @todo Hash support
+
+7. Twig support.
+
+    Twig is a feature rich template engine. Yaf is a blading fast framework. What will it be if they work together?
+    Finally I find a Yaf-Twig adapter to use. However has not been updated for long and I find it not so easy to use. So I forked it and add more feature to it. You can now use it with Composer.
