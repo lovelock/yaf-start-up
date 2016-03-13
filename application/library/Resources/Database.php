@@ -15,9 +15,9 @@ class Database extends Common
     protected static $_type = 'mysql';
     private static $_instance;
 
-    public static function getInstance()
+    protected static function getInstance()
     {
-        if (static::$_instance === null) {
+        if (null === static::$_instance) {
             $database_config = Conf::get('database.params');
 
             try {
@@ -27,7 +27,7 @@ class Database extends Common
                     $database_config['password'],
                     [
                         PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8mb4'",
-                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
                         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                     ]
                 );
@@ -37,33 +37,6 @@ class Database extends Common
         }
 
         return static::$_instance;
-    }
-
-    public static function fetchAll()
-    {
-        try {
-            $stmt = static::getInstance()->query('select * from '.static::TABLE_NAME);
-            $result = $stmt->fetchAll();
-        } catch (PDOException $e) {
-            //todo log
-        }
-
-        return $result;
-    }
-
-    public static function findById($id)
-    {
-        try {
-            $stmt = static::getInstance()->prepare('select * from '.static::TABLE_NAME.' where `id` = :id');
-            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-            $stmt->execute();
-
-            $result = $stmt->fetch();
-        } catch (PDOException $e) {
-            //todo log
-        }
-
-        return $result;
     }
 
     private function __construct()
