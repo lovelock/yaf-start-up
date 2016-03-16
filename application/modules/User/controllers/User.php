@@ -2,9 +2,27 @@
 
 use Http\Response;
 use Http\Context;
+use Persistence\DatabaseUserRepository;
 
 class UserController extends \BaseController
 {
+    private $_repository;
+
+    public function init(UserRepository $repository)
+    {
+        $this->_repository = $repository;
+    }
+
+    public function showAction()
+    {
+        $id = Context::postInt('id', '1');
+
+        $user = $this->_repository->getUser($id);
+
+        $this->getView()->assign([
+            'user' => $user,
+        ]);
+    }
     public function newAction()
     {
         $name   = Context::postString('name', 'aName');

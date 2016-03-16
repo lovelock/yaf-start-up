@@ -1,15 +1,18 @@
 <?php
 
-class IndexController extends BaseController
+class IndexController extends \BaseController
 {
+    private $_repository;
+
+    public function init()
+    {
+        $this->_repository = new Persistence\DatabaseUserRepository();
+    }
+
     public function indexAction()
     {
-        echo '依赖注入';
-        echo '<br>';
-        echo '依赖容器';
-        echo '<br>';
-        echo '反射';
-        echo '<br>';
-        exit;
+        $this->getView()->assign([
+            'users' => $this->_repository->getUsers(),
+        ]);
     }
 }

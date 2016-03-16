@@ -1,42 +1,59 @@
 <?php
 
-class UserModel
+namespace Model;
+
+class User
 {
-    const TABLE_NAME = 'yaf_user';
+    private $_name;
+    private $_email;
+    private $_age;
+    private $_gender;
 
-    public static function addNewUser($name, $email, $age, $gender)
+    public function __construct($name, $email, $age, $gender)
     {
-        $sql = "INSERT INTO `".static::TABLE_NAME."` (`name`, `email`, `age`, `gender`) values (:name, :email, :age, :gender)";
-        $stmt = static::getInstance()->prepare($sql);
-        $stmt->execute([
-            ':name'   => $name,
-            ':email'  => $email,
-            ':age'    => $age,
-            ':gender' => $gender,
-        ]);
-
-        return $stmt->rowCount();
+        $this->_name   = $name;
+        $this->_email  = $email;
+        $this->_age    = $age;
+        $this->_gender = $gender;
     }
 
-    public static function updateEmail($id, $email)
+    public function getName()
     {
-        $sql = "UPDATE `".static::TABLE_NAME."` SET `email` = :email";
-        $stmt = static::getInstance()->prepare($sql);
-        $stmt->execute([
-            ':email' => $email,
-        ]);
-
-        return $stmt->rowCount();
+        return $this->_name;
     }
 
-    public static function showAll($start, $limit)
+    public function setName($name)
     {
-        $sql = "SELECT * FROM `".static::TABLE_NAME."` ORDER BY `id` limit :start, :limit";
-        $stmt = static::getInstance()->prepare($sql);
-        $stmt->bindParam(':start', $start, \PDO::PARAM_INT);
-        $stmt->bindParam(':limit', $limit, \PDO::PARAM_INT);
-        $stmt->execute();
+        $this->_name = $name;
+    }
 
-        return $stmt->fetchAll();
+    public function getEmail()
+    {
+        return $this->_email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->_email = $email;
+    }
+
+    public function getAge()
+    {
+        return $this->_age;
+    }
+
+    public function setAge($age)
+    {
+        $this->_age = $age;
+    }
+
+    public function getGender()
+    {
+        return $this->_gender;
+    }
+
+    public function setGender($gender)
+    {
+        $this->_gender = $gender;
     }
 }

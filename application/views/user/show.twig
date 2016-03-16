@@ -1,0 +1,21 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+    <h1>姓名: {{ user.name}}</h1>
+
+    <blockquote class="flow-text">邮箱: {{ user.email }}年龄: {{ user.age }}性别: {{ user.gender }}</blockquote>
+
+    <p><a href="/" class="btn">Back to the home page</a></p>
+
+    <hr/>
+
+    <p>
+        To read this article in the CLI, run the following command:
+    </p>
+
+    <div class="card-panel grey darken-3" style="color: white">
+        <pre><code>php console.php article 1</code></pre>
+    </div>
+
+{% endblock %}

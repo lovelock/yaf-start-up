@@ -31,12 +31,15 @@ class Conf
         $filename = CONF_PATH.'/'.explode('.', $key)[0].'.ini';
 
         if (is_file($filename) && is_readable($filename)) {
-            $ini = (new Ini($filename, ENV))->get($key);
+            $ini = new Ini($filename, ENV);
+            $config = $ini->get($key);
             if (is_a($ini, 'Yaf\Config\Ini', false)) {
-                return $ini->toArray();
-            } else {
-                return $ini;
+                $config = $ini->toArray();
             }
+        } else {
+            $config = null;
         }
+
+        return $config;
     }
 }
